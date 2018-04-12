@@ -1,0 +1,28 @@
+
+需求分析
+1) openProgram.bat 命令脚本
+根据txt提供的windows路径，生成打开程序的脚本文件
+例如 (由于windows 路径包含\，因此不能直接使用properties文件)
+(使用BufferedReader 直接读取一行，分别取路径，变量名称可以取倒数第二个)
+program.windows.browser.path=
+program.windows.browser.ie.path=
+program.windows.ide.eclipse.path=
+program.windows.tool.navicate.path=
+
+
+需要打开什么程序，直接通过增加配置即可实现，注意，为了防止乱码，
+在输出到文件的时候，应该采用GB2312编码方式.
+
+具体业务: 每个反斜杠后面的内容和下一个反斜杠前面的内容，加上双引号，处理之后输出路径值
+
+
+
+
+
+
+
+
+
+
+
+
