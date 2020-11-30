@@ -1,7 +1,7 @@
 @ rem ----- 信息 -----
-@ rem @filename x.bat
+@ rem @filename bat-template.bat
 @ rem @version 1.0
-@ rem @author qye.zheng
+@ rem @author qianye.zheng
 @ rem @description 
 
 @ rem @warning 为了防止中文环境乱码，保存文件的时候，应该保存为ANSI编码格式.
