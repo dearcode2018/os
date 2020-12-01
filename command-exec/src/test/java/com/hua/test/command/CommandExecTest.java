@@ -121,8 +121,9 @@ public final class CommandExecTest extends BaseTest {
 	@Test
 	public void testTemp() {
 		try {
-			
-			
+			String os = System.getProperty("os.name", "linux");
+			System.out.println(os);
+			System.out.println(System.getProperty("user.dir"));
 		} catch (Exception e) {
 			log.error("testTemp=====> ", e);
 		}

@@ -7,6 +7,7 @@
 package com.hua;
 
 import java.io.ByteArrayOutputStream;
+import java.io.File;
 
 import org.apache.commons.exec.CommandLine;
 import org.apache.commons.exec.DefaultExecutor;
@@ -15,6 +16,7 @@ import org.apache.commons.exec.Executor;
 import org.apache.commons.exec.PumpStreamHandler;
 
 import com.hua.constant.Constant;
+import com.hua.util.ClassPathUtil;
 
 /**
  * @type Main
@@ -32,7 +34,15 @@ public final class Main {
         String cmd = null;
         cmd = "ipconfig /all";
         cmd = "pwd";
-        cmd = args[0];
+        //cmd = args[0];
+        /*
+         * 脚本放在jar中，无法运行，路径例如: /usr/local/shell/command-exec.jar!/BOOT-INF/classes!/script/run.sh
+         * 因此，将脚本放在外面才是正确的做法
+         * 
+         */
+        //String path = ClassPathUtil.getClassPath("/script/run.sh");
+        //System.out.println(path);
+        cmd = System.getProperty("user.dir") + File.separatorChar + "script/run.sh";
         CommandLine cmdLine = CommandLine.parse(cmd);
         Executor executor = new DefaultExecutor();
         executor.setExitValue(0);
